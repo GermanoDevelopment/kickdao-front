@@ -14,7 +14,7 @@ contract KickDAO is ERC721, Ownable {
     {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "bafybeibqox746zpn7vadb6kthz2uwegbs7llb6augztkk4xl6awswuifvy";
+        return "https://ipfs.io/ipfs/bafybeibqox746zpn7vadb6kthz2uwegbs7llb6augztkk4xl6awswuifvy/";
     }
 
     function safeMint(address to) public onlyOwner returns (uint256) {
