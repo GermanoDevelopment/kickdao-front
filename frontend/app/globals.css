@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Principal */
+    --electric-blue: 221 83% 60%; /* #3B82F6 */
+    --dark-purple: 242 61% 33%; /* #312E81 */
+    --neutral-gray: 220 14% 96%; /* #F3F4F6 */
+    --medium-gray: 220 9% 46%; /* #6B7280 */
+    --soft-black: 222 47% 11%; /* #111827 */
+
+    /* Acentos */
+    --lime-green: 158 64% 40%; /* #10B981 */
+    --solar-yellow: 38 93% 56%; /* #FBBF24 */
+    --coral-red: 0 84% 60%; /* #EF4444 */
+
+    /* Mapeamento para as variáveis do shadcn/ui */
+    --background: var(--neutral-gray);
+    --foreground: var(--soft-black);
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--soft-black);
+
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--soft-black);
+
+    --primary: var(--electric-blue);
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: var(--dark-purple);
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: var(--medium-gray);
+
+    --accent: var(--dark-purple);
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: var(--coral-red);
+    --destructive-foreground: 210 40% 98%;
+
+    --success: var(--lime-green);
+    --success-foreground: 210 40% 98%;
+
+    --warning: var(--solar-yellow);
+    --warning-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: var(--electric-blue);
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: var(--soft-black);
+    --foreground: var(--neutral-gray);
+
+    --card: 222 47% 11%;
+    --card-foreground: var(--neutral-gray);
+
+    --popover: 222 47% 11%;
+    --popover-foreground: var(--neutral-gray);
+
+    --primary: var(--electric-blue);
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: var(--dark-purple);
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: var(--dark-purple);
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: var(--coral-red);
+    --destructive-foreground: 210 40% 98%;
+
+    --success: var(--lime-green);
+    --success-foreground: 210 40% 98%;
+
+    --warning: var(--solar-yellow);
+    --warning-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: var(--electric-blue);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-soft-black dark:text-neutral-gray;
+  }
+  p {
+    @apply text-soft-black dark:text-neutral-gray;
+  }
+  .text-muted-foreground {
+    @apply text-medium-gray dark:text-neutral-gray/70;
+  }
+}
+
+/* Componentes personalizados */
+@layer components {
+  .gradient-bg {
+    @apply bg-gradient-to-br from-dark-purple to-electric-blue;
+  }
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-dark-purple to-electric-blue;
+  }
+  .status-funded {
+    @apply text-lime-green;
+  }
+  .status-trending {
+    @apply text-solar-yellow;
+  }
+  .status-closed {
+    @apply text-coral-red;
+  }
+}
