@@ -164,12 +164,12 @@ export function CreateProjectForm() {
       const additionalImageUrls: string[] = []
 
       if (formData.coverImage) {
-        coverImageUrl = await uploadProjectImage(formData.coverImage)
+        // coverImageUrl = await uploadProjectImage(formData.coverImage)
       }
 
       for (const image of formData.additionalImages) {
-        const imageUrl = await uploadProjectImage(image)
-        additionalImageUrls.push(imageUrl)
+        // const imageUrl = await uploadProjectImage(image)
+        // additionalImageUrls.push(imageUrl)
       }
 
       // 2. Criar o projeto no blockchain (simulado para desenvolvimento)

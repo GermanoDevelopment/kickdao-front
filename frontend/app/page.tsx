@@ -50,7 +50,7 @@ export default function LandingPage() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-hero-pattern text-white">
+        <section className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 text-white">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -80,19 +80,26 @@ export default function LandingPage() {
                   </Button>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
+              {/* <div className="flex items-center justify-center">
                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
+                    src="/background.png"
                     alt="KickDAO Platform"
                     fill
                     className="object-cover rounded-lg"
                     priority
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
+            <Image
+              src="/background.png"
+              alt="KickDAO Platform"
+              fill
+              className="z-[-10] absolute w-full h-full object-cover"
+              priority
+            />
         </section>
 
         {/* Features Section */}

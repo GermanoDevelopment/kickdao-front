@@ -17,8 +17,12 @@ export function KdaoTokenCheck({ onSuccess, showCard = true }: KdaoTokenCheckPro
   const [isLoading, setIsLoading] = useState(false)
 
   const handleConnectWallet = async () => {
-    await connectWallet()
-    if (onSuccess && hasKdaoToken) {
+    // await connectWallet()
+
+    // if (onSuccess && hasKdaoToken) {
+    //   onSuccess()
+    // }
+    if (onSuccess) {
       onSuccess()
     }
   }
